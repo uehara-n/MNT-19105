@@ -1,0 +1,220 @@
+@charset "utf-8";
+// ===================================================================
+// トップページ
+// ===================================================================
+// ===================================================================
+// 各SCSSファイルのインポート
+// ===================================================================
+
+// 設定用
+@import "set";
+
+@import "compass";
+
+// ミックスイン、@extend、CSS3など
+@import "mixin";
+
+.main_v{
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.first_bnr{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap:wrap;
+    justify-content: space-between; 
+    text-align: center;
+    width: 908px;
+    margin: 0 auto 10px;
+    padding: 257px 26px 6px;
+    background: url(../images/common/bg_riyu_bnr.jpg) no-repeat left top;
+}
+
+.first_bnr img{
+    padding: 0 0 16px;
+}
+
+.top_bnr{
+	margin-bottom: 20px;
+	text-align: center;
+}
+/*トップページ共通ブロック*/
+.top_sec{
+	margin-bottom: 25px;
+	.sec_tit{
+		margin-bottom: 15px;
+	}
+        .more{
+            text-align: center;
+        }
+}
+/*施工事例*/
+.top_seko{
+	.more{
+		text-align: center;
+	}
+}
+
+/*スタッフブログ*/
+.top_blog{
+	.inner{
+		@include flexbox;
+		margin-bottom: 20px;
+		li{
+			width: 240px;
+			a{
+				color:#685f56;
+				display: block;
+				padding: 10px 0;
+				&:hover{
+					background:rgba(218,206,174,0.80);
+					img{
+						opacity: 0.6;
+						filter: Alpha(Opacity=60);
+					}
+				}
+			}
+			.pic{
+				display: block;
+				background: #FFF;
+				width: 200px;
+				height: 158px;
+				padding: 10px;
+				margin: 0 auto 10px;
+				@include box-shadow(0 0 5px rgba(0,0,0,0.33));
+				
+				.pic_inner{
+					display: block;
+					overflow: hidden;
+					height: 158px;
+				}
+			}
+			.text{
+				display: block;
+				width: 200px;
+				margin: 0 auto;
+				line-height: 1.5em;
+			}
+		}
+	}
+	.more{
+		text-align: center;
+	}
+
+}
+
+
+.blog_area{
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-between;
+    
+    .blog_box{
+        position: relative;
+        padding: 5px 5px 10px;
+        background: url(../page_image/top/blog_note_back.png);
+        
+        .blog_parts{
+            margin-top: 10px;
+        }
+        .blog_pic{
+            padding: 12px;
+            text-align: center;
+            background: url(../page_image/top/gaiheki_blog_pic_bg.png) no-repeat ;
+            
+            img{
+                width: 196px;
+                height: 141px;
+            }
+        }
+        .blog_txt{
+            font-size: 14px;
+            line-height: 25px;
+            padding: 10px;
+        }
+        .blog_more_btn{
+            text-align: center;
+        }
+    }
+    .jjf_blog{
+        .blog_more_btn{
+            margin:25px 0 0px;
+        }
+    }
+    .gaiheki_box{
+        width: 63%;
+        
+        .clearfix{
+            display: flex;
+            display: -webkit-flex;
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            justify-content: space-between;
+            
+            .blog_parts{
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+
+
+/*お客様の声*/
+.voice_archive{
+	.inner{
+		@include flexbox;
+		margin-bottom: 20px;
+		li{
+			position: relative;
+			width: 240px;
+			margin-left: -10px;
+			a{
+				color:#685f56;
+				display: block;
+				padding: 15px 0;
+				&:hover{
+					background:rgba(218,206,174,0.80);
+					img{
+						opacity: 0.6;
+						filter: Alpha(Opacity=60);
+					}
+				}
+			}
+			.pic{
+				display: block;
+				background: #FFF;
+				width: 178px;
+				height: 138px;
+				padding: 10px;
+				margin: 0 auto 10px;
+				@include box-shadow(0 0 5px rgba(0,0,0,0.33));
+				
+				.pic_inner{
+					display: block;
+					overflow: hidden;
+					height: 138px;
+				}
+			}
+			.text{
+				display: block;
+				width: 178px;
+				margin: 0 auto;
+				line-height: 1.5em;
+			}
+			.tape{
+					position: absolute;
+					top: 0;
+					left: 0;
+				}
+		}
+	}
+	.more{
+		text-align: center;
+	}
+}
